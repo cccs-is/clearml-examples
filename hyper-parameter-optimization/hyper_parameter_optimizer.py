@@ -49,11 +49,11 @@ args = task.connect(args)
 # Get the template task experiment that we want to optimize
 if not args['template_task_id']:
     args['template_task_id'] = Task.get_task(
-        project_name='examples', task_name='Keras HP optimization base').id
+        project_name='ar2c testing', task_name='Keras HP optimization base').id
 
 # Set default queue name for the Training tasks themselves.
 # later can be overridden in the UI
-execution_queue = '1xGPU'
+execution_queue = 'queue-dev'
 
 # Example use case:
 an_optimizer = HyperParameterOptimizer(
